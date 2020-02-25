@@ -1,15 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
+// React: javascript library editing html
+// JSX: extension of javascript language writing html like syntax
+// ES6: next generation of javascript
+// Babel: compiler transcompile JSX into compatible javascript language
 
-import App from './components/app';
-import reducers from './reducers';
+import React from "react";
+import ReactDOM from "react-dom";
 
-const createStoreWithMiddleware = applyMiddleware()(createStore);
+// create a component producing html
+// this creates a class
+const App = function () {
+    return <div>Hi</div>
+};
 
-ReactDOM.render(
-  <Provider store={createStoreWithMiddleware(reducers)}>
-    <App />
-  </Provider>
-  , document.querySelector('.container'));
+// put the component on the page
+ReactDOM.render(<App></App>, document.querySelector('.container'));
