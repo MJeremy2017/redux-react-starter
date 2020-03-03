@@ -5,7 +5,8 @@ const VideoListItem = (props) => {
   const imageUrl = video.snippet.thumbnails.default.url;
 
   return (
-      <li className="list-group-item">
+      // reset the parent state video when being clicked
+      <li onClick={() => props.onVideoSelect(video)} className="list-group-item">
           <div className="video-list media">
               <div className="media-left">
                   <img className="media-object" src={imageUrl}/>
